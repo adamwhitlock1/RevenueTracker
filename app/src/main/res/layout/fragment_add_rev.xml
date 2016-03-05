@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!--this layout is for the form elements for db entry input process-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <!--input for platform: uber lyft etc-->
+        <EditText
+            android:id="@+id/etxt_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/platform"
+            android:nextFocusDown="@+id/etxt_date"
+            android:singleLine="true" />
+
+        <!--input for date of revenue: defaults to current date when touched. should probably be changed to automatically inpout the current date without a need for user input-->
+        <EditText
+            android:id="@+id/etxt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_platform"
+            android:hint="@string/date"
+            android:nextFocusDown="@+id/etxt_amt"
+            android:singleLine="true" />
+
+        <!--input for revenue amount to 2 decimal points-->
+        <EditText
+            android:id="@+id/etxt_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_date"
+            android:hint="@string/amt"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+
+        <!--layout for add and reset buttons-->
+        <LinearLayout
+            android:id="@+id/layout_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_amt"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <!--add button-->
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add" />
+
+            <!--reset button-->
+            <Button
+                android:id="@+id/button_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

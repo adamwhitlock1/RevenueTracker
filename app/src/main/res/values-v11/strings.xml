@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">Revenue Tracker</string>
+    <string name="add_rev">Add Revenue</string>
+    <string name="update_rev">Update Revenue</string>
+    <string name="platform">Platform</string>
+    <string name="date">Date</string>
+    <string name="amt">Revenue Amount</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
