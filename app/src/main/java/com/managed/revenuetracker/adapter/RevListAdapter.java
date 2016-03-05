@@ -95,7 +95,7 @@ public class RevListAdapter extends ArrayAdapter<Revenue> {
 
 
 	@Override
-	public static void remove(Revenue revenue) {
+	public void remove(Revenue revenue) {
 		revenues.remove(revenue);
 		notifyDataSetChanged();
 		super.remove(revenue);

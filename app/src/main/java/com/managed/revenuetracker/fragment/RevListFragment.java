@@ -95,11 +95,14 @@ public class RevListFragment extends Fragment implements OnItemClickListener,
 	@Override
 	public boolean onItemLongClick(AdapterView<?> parent, View view,
 			int position, long arg3) {
-		Revenue employee = (Revenue) parent.getItemAtPosition(position);
+		Revenue revenue = (Revenue) parent.getItemAtPosition(position);
 
 		// Use AsyncTask to delete from database
-		RevenueDAO.delete(employee);
-		RevListAdapter.remove(employee);
+		RevenueDAO.delete(revenue);
+
+		// **** this is an issue and I cannot get the actual list view to update correctly after removing db entry
+		// RevListAdapter.remove(revenue);
+
 		return true;
 	}
 
